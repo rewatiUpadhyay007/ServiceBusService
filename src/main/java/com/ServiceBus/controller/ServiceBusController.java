@@ -1,8 +1,10 @@
-package com.pde.pdedemo.controller;
+package com.ServiceBus.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.pde.service.*;
+
+import com.ServiceBus.service.*;
+
 import java.io.IOException;
 import java.util.List;
 
