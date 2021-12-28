@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/pdeAzureService.jar pdeAzureService.jar
+ADD target/ServiceBusService.jar ServiceBusService.jar
 EXPOSE 9003
-ENTRYPOINT ["java","-jar","pdeAzureService.jar"]
+ENTRYPOINT ["java","-jar","ServiceBusService.jar"]

@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ServiceBusService
+  labels:
+    app: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: ServiceBusService
+          image: pdecontainerregistry.azurecr.io/ServiceBusService:Latest
+          ports:
+            - containerPort: 9003
+
+ kind: Service 
+ apiVersion: v1 
+ metadata: 
+   name: ServiceBusService
+ spec: 
+   selector: 
+     app: web 
+   ports: 
+   - protocol: TCP 
+     port: 9003
+     targetPort: 9003
+   type: LoadBalancer
