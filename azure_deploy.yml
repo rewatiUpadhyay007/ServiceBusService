@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ServiceBusService
+  name: userdatareporting
   labels:
     app: web
 spec:
@@ -16,15 +16,15 @@ spec:
         app: web
     spec:
       containers:
-        - name: ServiceBusService
-          image: pdecontainerregistry.azurecr.io/ServiceBusService:Latest
+        - name: servicebusservice
+          image: pdecontainerregistry.azurecr.io/servicebusservice:_version_
           ports:
             - containerPort: 9003
-
+---
  kind: Service 
  apiVersion: v1 
  metadata: 
-   name: ServiceBusService
+   name: servicebusservice-svc
  spec: 
    selector: 
      app: web 
