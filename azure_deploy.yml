@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: userdatareporting
+  name: servicebusservice
   labels:
     app: web
 spec:
